@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortnite Tournament Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎮 Fortnite Tournament Dashboard</h1>
+    <p>Painel de desempenho dos jogadores do torneio</p>
+  </header>
+
+  <main>
+
+    <section class="summary" id="summary">
+      <div class="card-summary">
+        <h3>Total de Jogadores</h3>
+        <p id="totalPlayers">0</p>
+      </div>
+      <div class="card-summary">
+        <h3>Média de K/D</h3>
+        <p id="averageKD">0</p>
+      </div>
+      <div class="card-summary">
+        <h3>Maior Ranking</h3>
+        <p id="bestRanking">0</p>
+      </div>
+    </section>
+
+    <section class="filters">
+      <label for="gameFilter">Filtrar por modo:</label>
+      <select id="gameFilter">
+        <option value="Todos">Todos</option>
+        <option value="Solo">Solo</option>
+        <option value="Duos">Duos</option>
+        <option value="Squads">Squads</option>
+      </select>
+    </section>
+
+    <section>
+      <h2>Jogadores</h2>
+      <div id="playersContainer" class="players-grid"></div>
+    </section>
+
+    <section class="form-section">
+      <h2>Adicionar Novo Jogador</h2>
+      <form id="playerForm">
+        <input type="text" id="name" placeholder="Nome do jogador" required>
+
+        <select id="game" required>
+          <option value="">Selecione o modo</option>
+          <option value="Solo">Solo</option>
+          <option value="Duos">Duos</option>
+          <option value="Squads">Squads</option>
+        </select>
+
+        <input type="number" id="matches" placeholder="Partidas jogadas" min="0" required>
+        <input type="number" id="wins" placeholder="Vitórias" min="0" required>
+        <input type="number" id="losses" placeholder="Derrotas" min="0" required>
+        <input type="number" id="kd" placeholder="K/D Ratio" min="0" step="0.01" required>
+        <input type="number" id="ranking" placeholder="Ranking" min="1" required>
+
+        <button type="submit">Adicionar Jogador</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Dashboard desenvolvido com HTML, CSS e JavaScript puro.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
