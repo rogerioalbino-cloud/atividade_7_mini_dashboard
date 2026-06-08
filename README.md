@@ -30,14 +30,3 @@ HTML5
 CSS3
 JavaScript (ES6)
 LocalStorage
-
-## Prints
-Adicione aqui capturas de tela do dashboard funcionando.
-
-## Exemplo de commits
-feat: estrutura inicial do dashboard
-feat: renderização dinâmica dos jogadores
-feat: filtro por modo de jogo
-feat: formulário para adicionar jogadores
-feat: persistência com localStorage
-docs: criação do README
